@@ -1,0 +1,61 @@
+//====================================================================================================
+.discounts {
+
+    // .discounts__container
+
+    &__container {
+        display: grid;
+        gap: 36px;
+        padding-top: 36px;
+        @include adaptiveValue("padding-bottom", 96, 48);
+    }
+
+    // .discounts__image
+
+    &__image {
+        img{
+            width: 100%;
+            border-radius: 30px;
+        }
+    }
+
+    // .discounts__info
+
+    &__info {
+        display: grid;
+        gap: 18px;
+    }
+
+    // .discounts__title
+
+    &__title {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 42px;
+        color: #333333;
+        max-width: 1080px;
+    }
+
+    // .discounts__date
+
+    &__date {
+        font-size: 22px;
+        line-height: 26px;
+        color: #939393;
+    }
+
+    // .discounts__text
+
+    &__text {
+        font-size: 18px;
+        line-height: 21px;
+        color: #333333;
+        padding-top: 6px;
+        span{
+            display: block;
+            padding-top: 14px;
+        }
+    }
+}
+
+//====================================================================================================

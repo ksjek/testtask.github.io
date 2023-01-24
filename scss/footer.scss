@@ -1,0 +1,213 @@
+//====================================================================================================
+.footer {
+    background-color: #F4F4F4;
+    // .footer__container
+
+    &__container {
+        padding-top: 36px;
+        padding-bottom: 18px;
+        display: flex;
+        flex-direction: column;
+        gap: 36px;
+        @media(max-width: 768px){
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 5px;
+        }
+    }
+
+    // .footer__info
+
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        @media(max-width: 768px){
+            flex-wrap: wrap;
+            max-width: 350px;
+            gap: 24px;
+        }
+    }
+
+    // .footer__information
+
+    &__information {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    // .footer__links
+
+    &__links {
+        line-height: 19px;
+        color: #333333;
+        display: flex;
+        @include adaptiveValue("gap", 62, 25);
+        @media(max-width: 768px){
+            gap: 24px;
+        }
+        @media(max-width: 520px){
+            gap: 25px;
+            font-size: 14px;
+        }
+    }
+
+    // .footer__link
+
+    &__link {
+        transition: color 0.3s ease 0s;
+        &:hover{
+            color: #E11C4B;
+        }
+    }
+    // .footer__contact
+
+    &__contact {
+        line-height: 19px;
+        color: #333333;
+        display: flex;
+        @include adaptiveValue("gap", 62, 25);
+        @media(max-width: 768px){
+            gap: 24px;
+        }
+        @media(max-width: 520px){
+            gap: 8px;
+            font-size: 14px;
+            padding-left: 6px;
+            flex-wrap: wrap;
+        }
+    }
+
+    // .footer__phone, .footer__mail
+
+    &__phone, &__mail {
+        position: relative;
+        transition: color 0.3s ease 0s;
+        &:hover{
+            color: #E11C4B;
+        }
+        @media(max-width: 768px){
+            padding-left: 24px;
+        }
+        @media(max-width: 520px){
+            flex: 1 1 100%;
+        }
+    }
+
+    // .footer__phone
+
+    &__phone {
+        &::before{
+			content: "";
+			background: url(../img/icons/phone.svg) center/100% no-repeat;
+			position: absolute;
+			top: 50%;
+			right: 132px;
+			transform: translate(0px, -50%);
+			width: 19px;
+			height: 19px;
+            @media(max-width: 520px){
+                left: -5px;
+            }
+		}
+    }
+
+    // .footer__mail
+
+    &__mail {
+        &::before{
+			content: "";
+			background: url(../img/icons/mail.svg) center/100% no-repeat;
+			position: absolute;
+			top: 50%;
+			right: 100px;
+			transform: translate(0px, -50%);
+			width: 26px;
+			height: 17px;
+            @media(max-width: 520px){
+                left: -5px;
+            }
+		}
+    }
+
+    // .footer__rights
+
+    &__rights {
+        font-size: 14px;
+        line-height: 20px;
+        color: #8D8D8D;
+        white-space: nowrap;
+        @media(max-width: 768px){
+            font-size: 14px;
+        }
+        @media(max-width: 520px){
+            order: 2;
+            font-size: 12px;
+        }
+    }
+
+    // .footer__social
+
+    &__social {
+        display: flex;
+        gap: 28px;
+        @media(max-width: 520px){
+            order: 1;
+            padding-left: 6px;
+        }
+    }
+}
+.social {
+
+    // .social__vk
+
+    &__vk, &__youtube, &__telegram {
+        position: relative;
+        &::before{
+            font-size: 24px;
+            position: relative;
+            z-index: 2;
+            @media(max-width: 520px){
+                font-size: 18px;
+            }
+        }
+        &::after{
+            content: "";
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1px solid #8D8D8D;
+            background-color: #fff;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            @media(max-width: 768px){
+                top: 11%;
+            }
+            @media(max-width: 520px){
+                top: 48%;
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+
+    // .social__vk
+
+    &__vk {
+    }
+
+    // .social__youtube
+
+    &__youtube {
+    }
+
+    // .social__telegram
+
+    &__telegram {
+    }
+}
+
+//====================================================================================================
